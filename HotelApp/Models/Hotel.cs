@@ -19,6 +19,6 @@ namespace HotelApp.Models
 
         public List<Booking> Bookings { get; set; } = new List<Booking>();
 
-        public List<Hotelincludes> includes { get; set; }= new List<Hotelincludes>();
+        public List<Hotelincludes>? includes { get; set; }= new List<Hotelincludes>();
     }
 }

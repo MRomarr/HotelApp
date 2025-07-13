@@ -1,6 +1,7 @@
 ﻿using HotelApp.DTOs.Hotel;
 using HotelApp.Interface.Services;
 using HotelApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -62,12 +63,8 @@ namespace HotelApp.Controllers
             {
                 return BadRequest("Hotel data is null.");
             }
-            var user = await _userManager.GetUserAsync(User);
-            if (user is null)
-            {
-                return NotFound("User Not Fount");
-            }
-            var createdHotel = await _hotelService.CreateHotelAsync(createHotelDto,user.Id);
+            
+            var createdHotel = await _hotelService.CreateHotelAsync(createHotelDto);
             return Ok(createdHotel);
         }
         

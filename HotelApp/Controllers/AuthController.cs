@@ -75,5 +75,6 @@ namespace HotelApp.Controllers
                 return BadRequest("Failed to reset password.");
             return Ok(new { message = "Password reset successfully." });
         }
+        
     }
 }

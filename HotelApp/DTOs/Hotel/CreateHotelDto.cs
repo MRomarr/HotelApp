@@ -7,7 +7,7 @@
         public decimal PricePerDay { get; set; }
         public string CityId { get; set; } = string.Empty;
 
-        public List<CreateIncludeDto> IncludesIds { get; set; } = new List<CreateIncludeDto>();
+        public List<CreateIncludeDto>? IncludesIds { get; set; } = new List<CreateIncludeDto>();
         public IFormFileCollection HotelPhotos { get; set; }
     }
 }

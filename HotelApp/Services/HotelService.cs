@@ -79,12 +79,12 @@ namespace HotelApp.Services
             };
             return hotelDto;
         }
-        public async Task<HotelDetailsDto> CreateHotelAsync(CreateHotelDto createHotelDto,string UserId)
+        public async Task<HotelDetailsDto> CreateHotelAsync(CreateHotelDto createHotelDto)
         {
             var hotelPhotoUrls = await _imageServece.AddImagesAsync(createHotelDto.HotelPhotos, createHotelDto.Name);
             var hotel = new Hotel
             {
-                UserId = UserId,
+                UserId = "a6e4f09b-bc33-47fe-9855-a49881f3100f",
                 Name = createHotelDto.Name,
                 Description = createHotelDto.Description,
                 PricePerDay = createHotelDto.PricePerDay,

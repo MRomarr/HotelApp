@@ -132,7 +132,7 @@ namespace HotelApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("bookings");
+                    b.ToTable("bookings", (string)null);
                 });
 
             modelBuilder.Entity("HotelApp.Models.City", b =>
@@ -152,7 +152,7 @@ namespace HotelApp.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("cities");
+                    b.ToTable("cities", (string)null);
                 });
 
             modelBuilder.Entity("HotelApp.Models.Country", b =>
@@ -166,7 +166,7 @@ namespace HotelApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("country");
+                    b.ToTable("country", (string)null);
                 });
 
             modelBuilder.Entity("HotelApp.Models.Hotel", b =>
@@ -202,7 +202,7 @@ namespace HotelApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("hotels");
+                    b.ToTable("hotels", (string)null);
                 });
 
             modelBuilder.Entity("HotelApp.Models.HotelPhoto", b =>
@@ -222,7 +222,7 @@ namespace HotelApp.Migrations
 
                     b.HasIndex("HotelId");
 
-                    b.ToTable("hotelPhotos");
+                    b.ToTable("hotelPhotos", (string)null);
                 });
 
             modelBuilder.Entity("HotelApp.Models.Hotelincludes", b =>
@@ -240,7 +240,7 @@ namespace HotelApp.Migrations
 
                     b.HasIndex("IncludeId");
 
-                    b.ToTable("Hotelincludes");
+                    b.ToTable("Hotelincludes", (string)null);
                 });
 
             modelBuilder.Entity("HotelApp.Models.Include", b =>
@@ -258,7 +258,7 @@ namespace HotelApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("includes");
+                    b.ToTable("includes", (string)null);
                 });
 
             modelBuilder.Entity("HotelApp.Models.Review", b =>
@@ -294,7 +294,7 @@ namespace HotelApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("reviews");
+                    b.ToTable("reviews", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
